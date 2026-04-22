@@ -83,11 +83,11 @@
     <!-- AUTHENTICATION SCREEN -->
     <div id="authScreen" class="hidden fixed inset-0 bg-slate-50 dark:bg-slate-900 z-50 flex items-center justify-center p-6 transition-colors duration-1000">
         <div class="glass-card w-full max-w-sm p-8 text-center animate-pop">
-            <h1 class="text-4xl font-black mb-2 dark:text-white tracking-tight">Focus abc</h1>
+            <h1 class="text-4xl font-black mb-2 dark:text-white tracking-tight">Focus.</h1>
             <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-8">Login to your vault</p>
             
-            <input type="email" id="authEmail" placeholder="Email Address" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3.5 mb-4 outline-none focus:border-brand-green dark:text-white transition-colors font-medium">
-            <input type="password" id="authPassword" placeholder="Password" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3.5 mb-2 outline-none focus:border-brand-green dark:text-white transition-colors font-medium">
+            <input type="email" id="authEmail" placeholder="Email Address" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3.5 mb-4 outline-none Focus:border-brand-green dark:text-white transition-colors font-medium">
+            <input type="password" id="authPassword" placeholder="Password" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3.5 mb-2 outline-none Focus:border-brand-green dark:text-white transition-colors font-medium">
             
             <p id="authError" class="text-xs font-bold text-red-500 mb-4 h-4"></p>
 
@@ -137,7 +137,7 @@
                     </svg>
                     <div class="z-10 flex flex-col items-center text-center">
                         <span id="todayScoreMain" class="text-4xl font-black tracking-tighter leading-none dark:text-white">0/0</span>
-                        <span class="text-xs font-bold text-slate-400 uppercase tracking-wide mt-1">Today</span>
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-wide mt-1">Now</span>
                     </div>
                 </div>
 
@@ -710,7 +710,7 @@
                             </div>
                             <button onclick="undoHabit('${habit.id}')" class="text-xs underline opacity-60 hover:opacity-100 p-1">Undo</button>
                         </div>
-                        <input type="text" id="note-${habit.id}" placeholder="1 word on how it felt..." class="hidden mt-1 text-xs px-2.5 py-1.5 rounded-lg bg-white/60 dark:bg-slate-900/60 border border-emerald-200/60 dark:border-emerald-800/60 outline-none focus:bg-white dark:focus:bg-slate-900 focus:border-emerald-400 w-full transition-all text-emerald-800 dark:text-emerald-300 placeholder-emerald-800/40 dark:placeholder-emerald-300/40 font-medium" onchange="saveNote('${habit.id}', this.value)" onclick="event.stopPropagation()">
+                        <input type="text" id="note-${habit.id}" placeholder="1 word on how it felt..." class="hidden mt-1 text-xs px-2.5 py-1.5 rounded-lg bg-white/60 dark:bg-slate-900/60 border border-emerald-200/60 dark:border-emerald-800/60 outline-none Focus:bg-white dark:Focus:bg-slate-900 Focus:border-emerald-400 w-full transition-all text-emerald-800 dark:text-emerald-300 placeholder-emerald-800/40 dark:placeholder-emerald-300/40 font-medium" onchange="saveNote('${habit.id}', this.value)" onclick="event.stopPropagation()">
                     </div>
                 </div>`;
             });
