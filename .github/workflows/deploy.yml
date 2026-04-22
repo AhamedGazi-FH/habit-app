@@ -1,4 +1,4 @@
-name: Deploy to FileZilla
+name: Deploy to Server
 on:
   push:
     branches:
@@ -11,12 +11,12 @@ jobs:
     - name: Get latest code
       uses: actions/checkout@v3
     
-    - name: Sync files to FileZilla via SFTP
-      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+    - name: Copy single file to server
+      uses: appleboy/scp-action@v0.1.7
       with:
-        server: ${{ secrets.FTP_SERVER }}
+        host: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         port: 22
-        remote_path: 'public_html/habit/' # Make sure this matches your exact FileZilla folder path
-        local_path: './index.html'
+        source: "index.html"
+        target: "/applications/pzqsaarnqz/public_html/habit/"
