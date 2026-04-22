@@ -11,10 +11,12 @@ jobs:
     - name: Get latest code
       uses: actions/checkout@v3
     
-    - name: Sync files to FileZilla
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+    - name: Sync files to FileZilla via SFTP
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       with:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: /habit/ # Change this to your exact folder path on the server
+        port: 22
+        remote_path: '/habit/' # Make sure this matches your exact FileZilla folder path
+        local_path: './'
